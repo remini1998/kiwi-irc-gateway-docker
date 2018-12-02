@@ -2,6 +2,8 @@ FROM golang:rc
 
 RUN apt-get install -y git
 
+RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+
 RUN mkdir -p /go/src/github.com/kiwiirc/
 WORKDIR /go/src/github.com/kiwiirc/
 
